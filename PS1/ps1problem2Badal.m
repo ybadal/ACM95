@@ -1,14 +1,23 @@
-% Running function
-mandelbrot(1000,500)
+% Setup region R for part 2
+x0 = -2;
+x1 = 1;
+y0 = -1.5;
+y1 = 1.5;
+
+% Running function for part 1
+mandelbrot(x0, x1, y0, y1, 1000,500)
+
+% Setup region R for part 2
+x0_2 = -0.748766713922161;
+x1_2 = -0.748766707771757;
+y0_2 = 0.123640844894862;
+y1_2 = 0.123640851045266;
+
+% Running function for part 2
+mandelbrot(x0_2, x1_2, y0_2, y1_2, 1000,500)
 
 % Function
-function mandelbrot(n, niter)
-
-% Setup region R
-x0 = -0.748766713922161;
-x1 = -0.748766707771757;
-y0 = 0.123640844894862;
-y1 = 0.123640851045266;
+function mandelbrot(x0, x1, y0, y1, n, niter)
 
 % Creating m x m grid
 x = linspace(x0, x1, n);
